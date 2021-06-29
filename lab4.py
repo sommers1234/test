@@ -1,41 +1,37 @@
-from Program4 import Menu
-from lab2 import NBA_players
-
-
-import numpy as np 
-def fibonacciFinder (max):
-    i = 0
-    j = 1
-    k = 0
-    while i < max
-    print k
+grocery_items = {"Chicken": 1.59, "Beef": 1.99, "Cheese": 1.0, "Milk": 2.5}
+Shoes = {"Jordan 13": 1, "Yezzy" : 8, "Foamposite" : 10, "Air Max" : 5, "SB Dunk" : 20}
 
 
 
-Area = triangleArea(2,4)
+def rectangle_area(width, hieght):
+    area = width * hieght
+    return area
 
-n = 5
-m = 5 
-areaList = []
-for b in range(0,n)
-    for h in range(o,m)
-     areaList.append(triangleArea(b,h))
+def total_price(item1, item2):
+    item1_price = grocery_items[item1]
+    item2_price = grocery_items[item2]
+    price = item1_price + item2_price
 
-Menu = {"Burgers": 12.99, "Fries": 3.99, "Shakes": 1.50}
-def foodSum(Dict, item1, item2):
-    sum = Dict[item1] + Dict[item2]
-    print("the total price of your order of" + item1 + "and" + item2 + "is $" + str(sum))
-    sum *= 1.0925
-    print("with tax that will be $" + str(sum))
+    return price
 
-def foodSum2 (Dict, *args):
-    sum = 0 
-    text = 'the total price of your order of '
-    for keys in args:
-        if keys in Dict:
-        sum += Dict[keys]
-        text += keys = " "
-    text += "is $" + str(sum)
-    print(text)
+# print("Chicken and Cheese Prices:")
+# print(total_price("chicken", Cheese))  # 2.59
 
-foodSum2(Menu, "Burgers", "Fries", "Fries", "SHakes", "Burrito", "Shakes")
+# print("Chicken and Cheese Price:" + str(total_price("Chicken","Cheese")))
+
+# print("Milk and Beef Price: " + str((total_price("Milk","Beef")))
+
+
+def price_difference(item1, item2):
+    item1_price = grocery_items[item1] # Milk -> 2.5
+    item2_price = grocery_items[item2] # Cheese -> 1.0
+
+    if item1_price > item2_price:
+        difference = item1_price - item2_price
+    else:
+        difference = item2_price - item1_price
+        
+    return difference
+
+print(price_difference("Chicken", "Cheese"))
+print(price_difference("Chicken", "Milk"))
